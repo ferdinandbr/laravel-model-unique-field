@@ -24,11 +24,6 @@ jobs:
     - name: Install Dependencies
       run: composer install --prefer-dist --no-progress --no-suggest
 
-    - name: Copy .env.testing
-      run: cp .env.testing .env
-
-    # Executa os testes
     - name: Run Tests
-      run: |
-        composer dump-autoload
+      run:
         ./vendor/bin/phpunit
