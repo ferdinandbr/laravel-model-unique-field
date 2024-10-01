@@ -1,0 +1,34 @@
+name: Run Tests
+
+on:
+  push:
+    branches:
+      - dev
+  pull_request:
+    branches:
+      - dev 
+jobs:
+  package-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Set up PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.0'
+        extensions: mbstring, sqlite, pdo_sqlite
+
+    - name: Check out code
+      uses: actions/checkout@v4
+
+    - name: Install Dependencies
+      run: composer install --prefer-dist --no-progress --no-suggest
+
+    - name: Copy .env.testing
+      run: cp .env.testing .env
+
+    # Executa os testes
+    - name: Run Tests
+      run: |
+        composer dump-autoload
+        ./vendor/bin/phpunit --coverage
