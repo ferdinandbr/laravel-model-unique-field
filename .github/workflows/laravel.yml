@@ -7,6 +7,7 @@ on:
   pull_request:
     branches:
       - dev 
+
 jobs:
   package-tests:
     runs-on: ubuntu-latest
@@ -25,5 +26,5 @@ jobs:
       run: composer install --prefer-dist --no-progress --no-suggest
 
     - name: Run Tests
-      run:
-        ./vendor/bin/phpunit
+      run: |
+        ./vendor/bin/phpunit --configuration phpunit.xml
