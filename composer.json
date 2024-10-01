@@ -1,0 +1,38 @@
+{
+    "name": "ferdinandbr/laravel-model-unique-field",
+    "description": "create a record with a unique field without worrying",
+    "type": "library",
+    "require": {
+        "php": ">=7.3",
+        "laravel/framework": "^8.0|^9.0|^10.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Ferdinandbr\\LaravelModelUniqueField\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ferdinandbr\\LaravelModelUniqueField\\Tests\\": "Tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ferdinandbr\\LaravelModelUniqueField\\LaravelModelUniqueFieldServiceProvider"
+            ]
+        }
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.27",
+        "phpunit/phpunit": "^10.5",
+        "larastan/larastan": "^2.0"
+    },
+    "authors": [
+        {
+            "name": "ferdinandbr",
+            "email": "nandoaraujo353@gmail.com"
+        }
+    ]
+}
