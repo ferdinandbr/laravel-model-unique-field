@@ -8,13 +8,13 @@ The package is customizable and can be applied to any model attribute, ensuring 
 
 ## Requirement
 
-- Minimum PHP ^7.3
+- Minimum PHP ^8.0
 
 ## Installation
 
 You can install the package via composer for latest version
 ```bash
-$ composer require ferdinandbr/laravel-model-unique-field
+composer require ferdinandbr/laravel-model-unique-field
 ```
 
 

@@ -3,8 +3,8 @@
     "description": "create a record with a unique field without worrying",
     "type": "library",
     "require": {
-        "php": ">=7.3",
-        "laravel/framework": "^8.0|^9.0|^10.0"
+        "php": ">=8.0",
+        "laravel/framework": "^9.0|^10.0"
     },
     "license": "MIT",
     "autoload": {
@@ -25,8 +25,8 @@
         }
     },
     "require-dev": {
-        "orchestra/testbench": "^8.27",
-        "phpunit/phpunit": "^10.5",
+        "orchestra/testbench": "^7.34",
+        "phpunit/phpunit": "^9.5.10",
         "larastan/larastan": "^2.0"
     },
     "authors": [
